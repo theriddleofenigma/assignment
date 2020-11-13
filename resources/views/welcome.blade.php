@@ -33,6 +33,8 @@
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif
                     @endif
+                    <a href="{{ route('users.import.excel') }}" class="ml-4 text-sm text-gray-700 underline">User Import</a>
+                    <a href="{{ route('users.export') }}" class="ml-4 text-sm text-gray-700 underline">Users Excel Sample</a>
                 </div>
             @endif
 
