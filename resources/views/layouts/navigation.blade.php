@@ -15,8 +15,16 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @auth
+                        <x-nav-link href="{{ route('profile') }}" :active="request()->routeIs('profile')">
+                            {{ __('My Profile') }}
+                        </x-nav-link>
+                    @endauth
                     <x-nav-link href="{{ route('users.import.excel') }}" :active="request()->routeIs('users.import.excel')">
                         {{ __('User Import') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('users.export') }}" :active="request()->routeIs('users.export')">
+                        {{ __('Users Excel Sample') }}
                     </x-nav-link>
                 </div>
             </div>

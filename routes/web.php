@@ -25,8 +25,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('profile', [UsersController::class, 'profile'])->middleware(['auth'])->name('profile');
 
-require __DIR__.'/auth.php';
+Route::get('users/export/', [UsersController::class, 'export'])->name('users.export');
+
+require __DIR__ . '/auth.php';
