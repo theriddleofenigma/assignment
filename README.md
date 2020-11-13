@@ -13,7 +13,7 @@
 - Go to User Import link from the navigation menu.
 - Try uploading the excel-file. Then click the import button to import the excel-data. 
 - It will update the user record if the email already exists. Otherwise, it will create a new user record.
-- It will notify you if any errors is there. Also, you will get a message if the import is successfully done.
+- It will notify you if any errors is there. Also, you will get a message once the import is successfully done.
 
 ## Steps to validate - Caching User Profile
 - Login with a user account.
