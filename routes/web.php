@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UsersController;
+use App\Http\Livewire\UserImportExcel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/users/import/excel', UserImportExcel::class)->name('users.import.excel');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::get('profile', [UsersController::class, 'profile'])->middleware(['auth'])->name('profile');
+
+Route::get('users/export/', [UsersController::class, 'export'])->name('users.export');
+
+require __DIR__ . '/auth.php';
